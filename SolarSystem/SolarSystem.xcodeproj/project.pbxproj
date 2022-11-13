@@ -14,6 +14,7 @@
 		1B07B25028866683003E5922 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B07B24E28866683003E5922 /* LaunchScreen.storyboard */; };
 		1C7C267029206BD600E70F63 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C266F29206BD600E70F63 /* Planet.swift */; };
 		1C7C267229206C0100E70F63 /* PlanetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C267129206C0100E70F63 /* PlanetController.swift */; };
+		1C7C2676292077E200E70F63 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C2675292077E200E70F63 /* PlanetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1B07B25128866683003E5922 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C7C266F29206BD600E70F63 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		1C7C267129206C0100E70F63 /* PlanetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetController.swift; sourceTree = "<group>"; };
+		1C7C2675292077E200E70F63 /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1C7C267129206C0100E70F63 /* PlanetController.swift */,
 				1B07B24328866682003E5922 /* AppDelegate.swift */,
 				1B07B24528866682003E5922 /* SceneDelegate.swift */,
+				1C7C2675292077E200E70F63 /* PlanetViewController.swift */,
 				1B07B24928866682003E5922 /* Main.storyboard */,
 				1B07B24C28866683003E5922 /* Assets.xcassets */,
 				1B07B24E28866683003E5922 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7C2676292077E200E70F63 /* PlanetViewController.swift in Sources */,
 				1B07B24428866682003E5922 /* AppDelegate.swift in Sources */,
 				1B07B24628866682003E5922 /* SceneDelegate.swift in Sources */,
 				1C7C267029206BD600E70F63 /* Planet.swift in Sources */,
