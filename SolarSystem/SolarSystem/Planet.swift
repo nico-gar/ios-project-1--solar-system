@@ -53,3 +53,21 @@ enum PlanetOrder: Int {
     case uranus = 7
     case neptune = 8
 }
+
+extension Planet : Equatable {}
+
+func ==(lhs: Planet, rhs: Planet) -> Bool {
+    if lhs.name != rhs.name {return false}
+    if lhs.planetDescription != rhs.planetDescription {return false}
+    if lhs.imageName != rhs.imageName {return false}
+    if lhs.orderNumber != rhs.orderNumber {return false}
+    if lhs.dayLengthInDays != rhs.dayLengthInDays {return false}
+    if lhs.yearLengthInDays != rhs.yearLengthInDays {return false}
+    if lhs.radiusInMiles != rhs.radiusInMiles {return false}
+    if lhs.moonCount != rhs.moonCount {return false}
+    if lhs.ringCount != rhs.ringCount {return false}
+    if lhs.planetType != rhs.planetType {return false}
+    if lhs.distanceFromSun != rhs.distanceFromSun {return false}
+    
+    return true
+}

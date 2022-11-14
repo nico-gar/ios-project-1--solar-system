@@ -15,7 +15,6 @@ struct PlanetController {
         planet.favorite = !planet.favorite
     }
     
-    
     //
     let planets: [Planet] = [
         
@@ -36,4 +35,13 @@ struct PlanetController {
         Planet(name: "Neptune", planetDescription: "Roman god of the sea", imageName: "neptune", orderNumber: PlanetOrder.neptune.rawValue, dayLengthInDays: 0.66, yearLengthInDays: 60190, radiusInMiles: 15299.4, moonCount: 14, ringCount: 5, planetType: PlanetType.iceGiant.rawValue, distanceFromSun: 30.1, favorite: false)
     ]
     
+    
+    //Data persistence
+    func savePlanetsToDisk(){
+        //Save data to disk
+    }
+    
+    func loadPlanetsFromDisk(){
+        //Load planets from disk
+    }
 }
