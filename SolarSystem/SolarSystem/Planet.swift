@@ -19,8 +19,9 @@ class Planet {
     let ringCount: Int
     let planetType: String
     let distanceFromSun: Double
+    var favorite: Bool
 
-    init(name: String, planetDescription: String, imageName: String, orderNumber: Int,  dayLengthInDays: Double, yearLengthInDays: Int, radiusInMiles: Double, moonCount: Int, ringCount: Int, planetType: String, distanceFromSun: Double) {
+    init(name: String, planetDescription: String, imageName: String, orderNumber: Int,  dayLengthInDays: Double, yearLengthInDays: Int, radiusInMiles: Double, moonCount: Int, ringCount: Int, planetType: String, distanceFromSun: Double, favorite: Bool) {
         self.name = name
         self.planetDescription = planetDescription
         self.imageName = name.lowercased()
@@ -32,6 +33,7 @@ class Planet {
         self.ringCount = ringCount
         self.planetType = planetType
         self.distanceFromSun = distanceFromSun
+        self.favorite = favorite
     }
 }
 

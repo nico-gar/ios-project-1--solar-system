@@ -8,14 +8,20 @@
 import UIKit
 
 class PlanetViewController: UITableViewController {
-
+    let backgroundView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView(<#T##tableView: UITableView##UITableView#>, titleForHeaderInSection: <#T##Int#>)
-        print("PlanetViewController loaded successfully!")
-
+        title = "Solar System"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = UIColor.white
+        print("load successful")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+
+            tableView.reloadData()
+        }
 
     // MARK: - Table view data source
 
@@ -26,54 +32,59 @@ class PlanetViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return PlanetController.planets.count
+        return PlanetController.shared.planets.count
   
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlanetCell", for: indexPath)
+        // new defaultContentConfiguration() format start
+        
+        let planet = PlanetController.shared.planets[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-        let planet = PlanetController.planets[indexPath.row]
+        
+        
         content.text = planet.name
         content.secondaryText = planet.planetType
-        content.image = UIImage(systemName: "circle")
-
-        let backgroundView = UIView()
-
-        backgroundView.backgroundColor = UIColor.systemGray6
-
-        cell.selectedBackgroundView = backgroundView
-
+        content.image = UIImage(systemName: (planet.favorite) ? "circle.fill": "circle")
+      
         content.textProperties.color = .label
-                content.textProperties.font = UIFont.preferredFont(forTextStyle: .headline)
-                content.textToSecondaryTextVerticalPadding = 4
+        content.textProperties.font = UIFont.preferredFont(forTextStyle: .headline)
+        content.textToSecondaryTextVerticalPadding = 4
 
         content.secondaryTextProperties.color = .secondaryLabel
-                content.secondaryTextProperties.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        content.secondaryTextProperties.font = UIFont.preferredFont(forTextStyle: .subheadline)
 
         content.imageProperties.tintColor = .systemPurple
-                content.imageToTextPadding = 16
+        content.imageToTextPadding = 16
+        
+        backgroundView.backgroundColor = UIColor.systemGray6
+        cell.selectedBackgroundView = backgroundView
+
 
         cell.contentConfiguration = content
-
+//
         return cell
         
     }
     
 
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "PlanetDetailSegue"{
+            
+            guard let destinationVC = segue.destination as? PlanetDetailViewController,
+                  let indexPath = tableView.indexPathForSelectedRow else { return }
+            
+            let planet = PlanetController.shared.planets[indexPath.row]
+            
+            destinationVC.planet = planet
+        }
     }
-    */
-
 }

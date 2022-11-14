@@ -15,6 +15,9 @@
 		1C7C267029206BD600E70F63 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C266F29206BD600E70F63 /* Planet.swift */; };
 		1C7C267229206C0100E70F63 /* PlanetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C267129206C0100E70F63 /* PlanetController.swift */; };
 		1C7C2676292077E200E70F63 /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C2675292077E200E70F63 /* PlanetViewController.swift */; };
+		1C7C2678292165D500E70F63 /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C2677292165D500E70F63 /* PlanetDetailViewController.swift */; };
+		1C7C267E2921930000E70F63 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C267D2921930000E70F63 /* DetailCollectionViewCell.swift */; };
+		1C7C26802921B6BC00E70F63 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C267F2921B6BC00E70F63 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		1C7C266F29206BD600E70F63 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		1C7C267129206C0100E70F63 /* PlanetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetController.swift; sourceTree = "<group>"; };
 		1C7C2675292077E200E70F63 /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
+		1C7C2677292165D500E70F63 /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
+		1C7C267D2921930000E70F63 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C7C267F2921B6BC00E70F63 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +71,13 @@
 				1B07B24328866682003E5922 /* AppDelegate.swift */,
 				1B07B24528866682003E5922 /* SceneDelegate.swift */,
 				1C7C2675292077E200E70F63 /* PlanetViewController.swift */,
+				1C7C2677292165D500E70F63 /* PlanetDetailViewController.swift */,
+				1C7C267F2921B6BC00E70F63 /* Constants.swift */,
 				1B07B24928866682003E5922 /* Main.storyboard */,
 				1B07B24C28866683003E5922 /* Assets.xcassets */,
 				1B07B24E28866683003E5922 /* LaunchScreen.storyboard */,
 				1B07B25128866683003E5922 /* Info.plist */,
+				1C7C267D2921930000E70F63 /* DetailCollectionViewCell.swift */,
 			);
 			path = SolarSystem;
 			sourceTree = "<group>";
@@ -144,11 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7C267E2921930000E70F63 /* DetailCollectionViewCell.swift in Sources */,
 				1C7C2676292077E200E70F63 /* PlanetViewController.swift in Sources */,
 				1B07B24428866682003E5922 /* AppDelegate.swift in Sources */,
 				1B07B24628866682003E5922 /* SceneDelegate.swift in Sources */,
 				1C7C267029206BD600E70F63 /* Planet.swift in Sources */,
+				1C7C2678292165D500E70F63 /* PlanetDetailViewController.swift in Sources */,
 				1C7C267229206C0100E70F63 /* PlanetController.swift in Sources */,
+				1C7C26802921B6BC00E70F63 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
